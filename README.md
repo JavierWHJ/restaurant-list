@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Restaurant List Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is a web application to keep track of restaurants you want to visit. You can upload, modify, delete, and sort restaurant details. The design is inspired by the Burpple app for a clean and user-friendly experience.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+### Frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **HTML, CSS, JavaScript, React**: Used to build a dynamic and interactive user interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
 
-### `npm test`
+- **Node.js, Express.js**: Used to handle server-side logic and API requests.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Database
 
-### `npm run build`
+- **MongoDB**: Used to store restaurant details in a flexible and scalable way.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Non-Functional Considerations
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Performance**: Ensured by using efficient frontend and backend frameworks and a fast database.
+2. **Security**: Implemented through secure coding practices and tools to protect user data.
+3. **Scalability**: Achieved by using scalable technologies that can handle increasing amounts of data and users.
+4. **Maintainability**: Ensured by using modular code structures and best practices for easy updates and debugging.
+5. **User Experience**: Focused on creating an intuitive and responsive interface for smooth user interactions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## High-Level Architecture
 
-### `npm run eject`
+```mermaid
+graph TD
+    A[Frontend - React App] -->|HTTP Requests| Backend
+    Backend -->|CRUD Operations| C[Database - MongoDB]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    subgraph Backend
+        B1[Express Router]
+        B2[Controllers]
+        B3[Middleware]
+    end
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    B1 --> Backend
+    B2 --> B1
+    B3 --> B1
+```
