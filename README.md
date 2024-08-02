@@ -1,6 +1,6 @@
 # Restaurant List Web App
-
 ## Overview
+![alt text](image.png)
 
 This is a web application to keep track of restaurants you want to visit. You can upload, modify, delete, and sort restaurant details. The design is inspired by the Burpple app for a clean and user-friendly experience.
 
